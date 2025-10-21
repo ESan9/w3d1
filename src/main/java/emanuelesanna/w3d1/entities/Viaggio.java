@@ -19,6 +19,7 @@ public class Viaggio {
     private UUID idViaggio;
     private String destinazione;
     private LocalDate data;
+    @Enumerated(EnumType.STRING)
     private StatoViaggio stato;
     @ManyToOne
     @JoinColumn(name = "id_dipendente")

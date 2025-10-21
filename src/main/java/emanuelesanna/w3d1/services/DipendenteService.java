@@ -63,7 +63,7 @@ public class DipendenteService {
             throw new BadRequestException("L'email " + dipendente.getEmail() + " è già registrata!");
         });
 
-        Dipendente newDipendente = new Dipendente(payload.username(), payload.nome(), payload.cognome(), payload.email());
+        Dipendente newDipendente = new Dipendente(payload.username(), payload.nome(), payload.cognome(), payload.email(), payload.password());
         newDipendente.setImmagineProfilo("https://ui-avatars.com/api/?name=" + payload.nome());
 
         Dipendente savedDipendente = this.dipendenteRepository.save(newDipendente);
